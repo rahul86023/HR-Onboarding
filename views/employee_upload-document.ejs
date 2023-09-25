@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="/css/upload-document.css">
+        <script src="/js/upload-document.js" ></script>
+
+        <link rel="stylesheet" href="/css/Navigation.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    </head>
+    <body>
+      <nav>
+        <div class="logo">
+          <a href="/employees/dashboard"><img src="/images/logo.png"></a>
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+           <li><a href="/employees/dashboard">Dashboard</a></li>
+           <li><a href="/employees/profile">Profile</a></li>
+           <li><a href="/employees/sign-out">Log Out</a></li>
+        </ul>
+     </nav><br><br>
+     <form action="/employees/uploaded"enctype="multipart/form-data" method="POST">
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item" style="text-align: left;">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Photograph & Signature:
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-3"></div>
+                           
+                            <div class="col-6">
+                            
+                                <label class="form-label" for="customFile">Upload Photograph:</label>
+                                <input type="file" name="Upload_Photograph" class="form-control" id="customFile"  /><br>
+                              
+                             
+                             
+                                <label class="form-label" for="customFile">Upload Signature:</label>
+                                <input type="file" name="Upload_Signature" class="form-control" id="customFile" /><br>
+                                
+                            </div>
+                          
+                            <div class="col-3"></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item" style="text-align: left;">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Upload Id Cards:
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                         
+                            <label class="form-label" for="customFile">PAN Card Front:</label>
+                            <input type="file" name="PAN_Card_Front" class="form-control" id="customFile"  /><br>
+                           
+                            
+                            
+                            <label class="form-label" for="customFile">Aadhar Card Front:</label>
+                            <input type="file" name="Aadhar_Card_Front" class="form-control" id="customFile"  /><br>
+                            
+                          
+                            <label class="form-label" for="customFile">Aadhar Card Back:</label>
+                            <input type="file" name="Aadhar_Card_Back" class="form-control" id="customFile"  /><br>
+                            
+                        </div>
+                        <div class="col-3"></div>
+                      </div>                    
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item" style="text-align: left;">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Bank Account and other details:
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                     
+                            <label class="form-label" for="customFile">Upload front page of your Passbook:</label>
+                            <input type="file" name="Upload_front_page_of_your_Passbook" class="form-control" id="customFile"  /><br>
+                            
+                            <label class="form-label" for="customFile">Upload your pay slip from last organization (if any):</label>
+                            <input type="file" name="Upload_your_pay_slip_from_last_organization" class="form-control" id="customFile"  /><br>
+                            
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+            
+           
+        </div>
+        <div class="form-group">
+          <button class="btn btn-danger btn-block">
+              Upload Files
+          </button>
+      </div>
+       </form>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Feedback</title>
+      <link rel="stylesheet" href="/css/feedback_form.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="container">
+      <div class="text">
+         Feedback
+      </div>
+      <p style="color:green;" > Hi! Its been a while since you started working with us. We're happy that you are a part of our team. Please take a survey to let us know about your onboarding experience.</p>
+      <br>
+      <p style="color:green;"> With love, HR team. </p>
+      <form action="/employees/feedback" method="POST" >
+        <div class="form-row">
+            <div class="input-data">
+               <input type="text"name="Full_Name" required>
+               <div class="underline"></div>
+               <label for="">Full Name</label>
+            </div>
+            <div class="input-data">
+               <input type="text" name="Email_ID" required>
+               <div class="underline"></div>
+               <label for="">Email ID</label>
+            </div>
+         </div>
+         <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">1. How satisfied were you with the onboarding in general?    </label>
+               <textarea class="contact-form-text" name="feedback1"placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">2. Did the information you received before your first day help you know what to expect and where to go?    </label>
+               <textarea class="contact-form-text"name="feedback2" placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">3. What could have gone better in the weeks leading up to your new job?    </label>
+               <textarea class="contact-form-text"name="feedback3" placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">4. Was the information you received on benefits on the first day of the job insightful and complete?   </label>
+               <textarea class="contact-form-text" name="feedback4"placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">5. Did you know where to go to get additional assistance on personnel matters, benefits, and paperwork following your first day on the job?  </label>
+               <textarea class="contact-form-text"name="feedback5" placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">6. Does your supervisor check in with you regularly to answer any questions or concerns you may have?   </label>
+               <textarea class="contact-form-text" name="feedback6" placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">7. What could have gone better in the weeks leading up to your new job?    </label>
+               <textarea class="contact-form-text" name="feedback7" placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">8. How well do you feel integrated into the team?   </label>
+               <textarea class="contact-form-text" name="feedback8" placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">9. What would you have liked your organization to share with you before your first day?   </label>
+               <textarea class="contact-form-text" name="feedback9" placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+           <div class="col-sm-12 form-group">
+               <label for="feedback">10. Please share any additional feedback or recommendations you may have to improve the organization's hiring and onboarding processes.   </label>
+               <textarea class="contact-form-text" name="feedback10" placeholder="Enter your message"></textarea>
+            </div>
+        </div>
+
+
+         <div class="form-row submit-btn">
+               <div class="input-data">
+                  <div class="inner"></div>
+                  <input type="submit" value="submit">
+               </div>
+            </div>
+   </form>
+ 
+
+   </body>
+</html>

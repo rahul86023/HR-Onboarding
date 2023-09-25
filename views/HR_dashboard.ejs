@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/HR_styles.css" />
+
+    <script src="/js/HR_script.js"></script>
+
+    
+  </head>
+  <body id="body">
+    <div class="container">
+      <main>
+        <div class="main__container">
+            <!-- MAIN TITLE STARTS HERE -->
+            <div class="main__title">
+                <img src="/images/hello.svg" alt="" />
+                <div class="main__greeting" style="text-align: left;">
+                    <h1>Welcome to Probotiq Solutions!</h1>
+                    <p>We are happy to see you.</p>
+                </div>
+            </div>
+            <!-- MAIN TITLE ENDS HERE -->
+            <!-- cards -->
+            <div class="main__cards">
+              <div class="card">
+                <i
+                  class="fa fa-user-o fa-2x text-lightblue"
+                  aria-hidden="true"
+                ></i>
+                <div class="card_inner">
+                  <p class="text-primary-p">Total Employees</p>
+
+                  <span class="font-bold text-title"><%= 3+ records[0]%></span>
+                </div>
+              </div>
+  
+              <div class="card">
+                <i class="fa fa-user-o fa-2x text-yellow" aria-hidden="true"></i>
+                <div class="card_inner">
+                  <p class="text-primary-p">Existing Employees</p>
+                  <span class="font-bold text-title">3</span>
+                </div>
+              </div>
+  
+              <div class="card">
+                <i
+                  class="fa fa-user-o fa-2x text-green"
+                  aria-hidden="true"
+                ></i>
+                <div class="card_inner">
+                  <p class="text-primary-p">New Hires</p>
+                  <span class="font-bold text-title"><%= records[0] %></span>
+                </div>
+              </div>
+              <div class="card">
+                <i
+                  class="fa fa-user-o fa-2x text-green"
+                  aria-hidden="true"
+                ></i>
+                <div class="card_inner">
+                  <p class="text-primary-p">Pending</p>
+                  <span class="font-bold text-title"><%= records[1] %></span>
+                </div>
+              </div>
+              
+            </div>
+            <!-- Cards ends -->
+            <div class="charts">
+              <!-- new sign ups table -->
+            <div class="charts__left">
+              <div class="charts__left__title">
+                <div>
+                  <h1>New SignUps</h1>
+                </div>
+              </div>
+              <div id="apex1">
+                <div class="table-box">
+                  <br>
+                  <table class="table">
+                    <thead>
+                      <th>Employee ID</th>
+                      <th>Name</th>
+                      <th>Email ID</th>
+                    </thead>
+                    <tbody>
+                      <%users.forEach(function(row){%>
+                        <tr>
+                          <td><%=row.empId%></td>
+                            <td><%=row.name%></td>
+                            <td><%=row.email%></td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- new sign up table end -->
+            <!-- right table -->
+            <div class="charts__right">
+              <div class="charts__right__title">
+                <div>
+                  <h1>Send Employee List</h1>
+                </div>
+              </div>
+
+              <div class="charts__right__cards">
+                <form action="/HRs/itMail" method="post">
+                  <div class="card4">
+                    <h1>IT Team</h1><br><hr><br>
+                    <p><input type="text" name="email" class="textbox" id="customfile" placeholder="Enter email"/><br>
+                      <button type="submit" class="btn2"><strong>SEND</strong></button>
+                    </p>
+                  </div>
+                </form>
+                <form action="/HRs/projectMail" method="post">
+                  <div class="card4">
+                    <h1>Project Team</h1><br><hr><br>
+                    <p><input type="text" name="email" class="textbox" id="customfile" placeholder="Enter email"/>
+                      <button type="submit" class="btn2"><strong>SEND</strong></button>
+                    </p>
+                  </div>
+                </form>
+                
+              </div>
+            </div>
+            <!-- right table ends -->
+            </div>
+          </div>
+        </main>
+      <div id="sidebar" style="text-align: left;">
+        <div class="sidebar__img">
+            <img src="/images/logo.png" alt="logo" />
+        </div>
+        <i onclick="closeSidebar()" class="fa fa-times" id="sidebarIcon" aria-hidden="true" ></i>
+        <div class="sidebar__menu">
+          <div class="sidebar__link active_menu_link">
+            <i class="fa fa-home"></i>
+            <a href="/HRs/dashboard">Dashboard</a>
+          </div>
+          <h2>MNG</h2>
+          <div class="sidebar__link">
+            <i class="fa fa-building-o"></i>
+            <a href="/HRs/emp-details">Employee Management</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-wrench"></i>
+            <a href="/HRs/new_hire">New Recruits Management </a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-archive"></i>
+            <a href="/HRs/kit-status">Welcome Kit Status</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-check-circle"></i>
+            <a href="/HRs/doc_verify">Document Verification</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-handshake-o"></i>
+            <a href="/HRs/queries">Employee Queries</a>
+          </div>
+          <br><hr><br>
+          <div class="sidebar__logout">
+            <i class="fa fa-power-off"></i>
+            <a href="/HRs/sign-out">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

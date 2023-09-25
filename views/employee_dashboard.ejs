@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+   
+        <link href="/css/Navigation.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>    </head>
+    <body>
+        <nav>
+            <div class="auth-links">
+                <a href="/employees/dashboard"><img src="/images/logo.png"></a>
+            </div>
+            <ul>
+			<li>
+                 <a class="active" href="/employees/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a  href="/employees/profile">Profile</a>
+           </li>
+           <li>
+                <a href="/employees/sign-out">Log Out</a>
+            </li>  
+            </ul>
+         </nav>
+        <br><br>
+        <div class="container">
+                <h1 style="text-align:justify">Welcome Aboard, <%= records.name%>!</h1><hr>
+                <p class="lead col-11" style="text-align:justify">We are pleased to welcome you as the newest member in our company. We hope you will find work here rewarding and challenging. Before you start working with us, we'd like to acquire some details and documents from you to smoothen your onboarding more. So, let's get started. </p><br>
+                <div class="row">
+                    <div class="card col-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Step-1:</h5><hr>
+                            <p class="card-text" >Provide some information regarding your personal, professional and previous employment.</p>
+                            <a href="/employees/fill_form" class="btn btn-outline-danger">Fill Form</a>
+                        </div>
+                    </div><div class="col-1"></div>
+                    <div class="card col-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Step-2:</h5><hr>
+                            <p class="card-text">Upload your documents so as to help us maintain your records efficiently.</p><br>
+                            <a href="/employees/upload" class="btn btn-outline-danger">Upload</a>
+                        </div>
+                    </div><div class="col-1"></div>
+                    <div class="card col-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Step-3:</h5><hr>
+                            <p class="card-text">Now, lean back and wait, while we verify your data. You can check status of your uploaded documents</p>
+                            <a href="/employees/check_status" class="btn btn-outline-danger">Status-Check</a>
+                        </div>
+                    </div>
+                </div>   
+        </div><br><br> 
+    </body>
+</html>
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR Onboarding</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/Navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <!------for fonts------->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <!---we had linked our css file----->
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png"></a>
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+           <li><a class="active" href="/">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="/employees/contact_us">Contact Us</a></li>
+        </ul>
+    </nav><br>
+    <div class="container">  
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="screen">
+                    <img src="/images/home/back.jpg" class="img-responsive" alt="">
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="header-content">
+                    <div class="header-content-inner">
+                        <br><br>
+                        <h1>Welcome to Probotiq Solutions</h1><br>
+                        <h1>Let's get started</h1><br>
+                        <div class="dropdown">
+                            <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Login
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="HRs/sign-in">As HR</a></li>
+                                <li><a class="dropdown-item" href="employees/sign-in">As Employee</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="about">
+        <div class="container">
+            <div class="row" style="text-align: left;">
+                <div class="col-12">
+                    <h2>About Us</h2><br>
+                    <h5 class="text-muted">Probotiq Solutions Pvt. Ltd. is in the business of Intelligent Automation of Enterprise Processes. A group entity of PKF International , we specialize in providing process automation solutions to enterprise clients using technologies such as Robotics Process Automation (RPA), Optical Character Recognition (OCR), Chat Bots, NLP/NLG, Machine Learning, Artificial Intelligence among others. Headquartered at Chennai – India, our team of specialists provide end to end automation solutions for your processes. Probotiq Solutions has clients spanning across India, Middle East & N America. We engage with our clients on various Consulting & Intelligent Automation implementation assignments and have a bouquet of service offerings.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

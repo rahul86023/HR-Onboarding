@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link href="/css/fill_form/bootstrap.css" rel="stylesheet" >
+        <link rel="stylesheet" href="/css/fill_form/Navigation.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/font_awesome.css">
+        <script src="/js/fill_form.js"></script>
+       
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="/employees/dashboard"><img src="/images/logo.png"></a>
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+               <li><a href="/employees/dashboard">Dashboard</a></li>
+               <li><a href="/employees/profile">Profile</a></li>
+               <li><a href="/employees/sign-out">Logout</a></li>
+            </ul>
+         </nav><br><br>
+        <div class="container">
+            <form action="/employees/formfilled" method="POST" onsubmit="btn.disabled = true; return true">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Personal Details:
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        
+                            <div class="row" style="text-align: left;">
+                            <div class="col-1"></div>
+                            <div class="col-4">
+                                <label class="form-label" for="customFile">Name:</label>
+                            </div>
+                            <div class="col-3">
+                                <label class="form-label" for="customFile">Employee ID:</label>
+                            </div>
+                            <div class="col-4">
+                                <label class="form-label" for="customFile">Date of Birth:</label>
+                            </div><div class="col-1"></div>
+                            <div class="col-2">
+                                <input type="text" name="fname" class="form-control" id="firstname" placeholder="First Name" required/>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" name="lname" class="form-control" id="lastname" placeholder="Last Name" required/><br>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" name="empId" class="form-control" id="lastname" placeholder="Employee ID" required/><br>
+                            </div>
+                            <div class="col-3">
+                                <input class="form-control" id="date" name="dob" placeholder="MM/DD/YYY" type="date" required/>
+                            </div><div class="col-1"></div><div class="col-1"></div>
+                            <div class="col-2">
+                                <select class="form-select" name="gender" aria-label="Default select example" required>
+                                    <option selected>Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Transgender">Transgender</option>
+                                  </select>
+                            </div>
+                            <div class="col-3">
+                                <select class="form-select" name="marital_status" aria-label="Default select example" required>
+                                    <option selected>Marital Status</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Widowed">Widowed</option>
+                                    <option value="Separated">Separated</option>
+                                    <option value="Divorced">Divorced</option>
+                                    <option value="Single">Single</option>
+                                  </select>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" name="nationality" placeholder="Nationality" required/>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" class="form-control" name="bloodgrp" placeholder="Blood Group" required/><br>
+                            </div><div class="col-1"></div><div class="col-1"></div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" name="aadhar" placeholder="Aadhar Card Number" />
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" name="pan" placeholder="PAN Card Number" required/><br>
+                            </div>
+                            <div class="col-2">
+                                <input type="tel" class="form-control" name="phone" placeholder="Contact Number" required/><br>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-select" name="size" aria-label="Default select example" required>
+                                    <option selected>T-Shirt Size</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="2XL">2XL</option>
+                                    <option value="3XL">3Xl</option>
+                                  </select>
+                            </div><div class="col-1"></div><div class="col-1"></div>
+                            <div class="col-11">
+                                <label class="form-label" for="customFile">Address Details:</label>
+                            </div><div class="col-1"></div>
+                            <div class="col-5">
+                                <input type="text" class="form-control" name="line1" placeholder="Address Line 1"/><br>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" class="form-control" name="line2" placeholder="Address Line 2"/><br>
+                            </div><div class="col-1"></div><div class="col-1"></div>
+                            <div class="col-2">
+                                <input type="text" class="form-control" name="pin" placeholder="PIN Code"/><br>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" class="form-control" name="city" placeholder="City"/><br>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" name="state" placeholder="State"/><br>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" name="country" placeholder="Country"/><br>
+                            </div>
+                            <div class="col-1"></div><div class="col-1"></div>
+                            <div class="col-11">
+                                <label class="form-label" for="customFile">Family Details:</label>
+                            </div><div class="col-1"></div>
+                            <div class="table-editable col-10" id="table">
+                                <table class="table table-bordered table-responsive-md text-center col-10">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Relation</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Birth Date</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Occupation</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Mother</th>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Mname" required></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Mdob" required></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Mgender" required></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Moccupation" required></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Father</th>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Fname" required></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Fdob" required></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Fgender" required></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Foccupation" required></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Spouse</th>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Sname" ></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Sdob" ></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Sgender" ></td>
+                                            <td><input type="text" style="border: none; max-width: 150px;" name="Soccupation" ></td>
+                                        </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>    
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Educational Details:
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row" style="text-align: left;">
+                        <div class="col-1"></div>
+                        <div class="col-11">
+                            <br><label class="form-label" for="customFile">Qualifications:</label>
+                        </div><div class="col-1"></div>
+                        <div class="col-10">
+                            <table class="table table-bordered table-responsive-md text-center col-10">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Program</th>
+                                    <th scope="col">Passing Year</th>
+                                    <th scope="col">College</th>
+                                    <th scope="col">Board/University</th>
+                                    <th scope="col">%/CGPA</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>X</th>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="Xyear" required></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="Xcollege" required></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="Xboard" required></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="Xpercent" required ></td>
+
+                                    </tr>
+                                    <tr>
+                                        <th>XII</th>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="XIIyear" required></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="XIIcollege" required></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="XIIboard" required ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="XIIpercent" required ></td>
+
+                                    </tr>
+                                    <tr>
+                                        <th>Graduation</th>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="Gyear" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="Gcollege" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="Gboard" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="Gpercent" ></td>
+
+                                    </tr>
+                                    <tr>
+                                        <th>Post Graduation</th>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="PGyear" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="PGcollege" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="PGboard" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="PGpercent" ></td>
+                                    </tr>
+                                </tbody>
+                            </table><br>               
+                        </div><div class="col-1"></div><div class="col-1"></div>                        
+                        <div class="col-10">
+                            <label class="form-label" for="customFile">Awards/Prizes/Scholarships:</label>
+                        </div><div class="col-1"></div><div class="col-1"></div>
+                        <div class="col-10">
+                            <textarea class="form-control" name='awards' id="exampleFormControlTextarea1" rows="6" placeholder="Please list out proud moments in your life be specifying the awards and reason thereof."></textarea><br>
+                        </div><div class="col-1"></div><div class="col-1"></div>
+                        <div class="col-11">
+                            <label class="form-label" for="customFile">Language Proficiency:</label>
+                        </div><div class="col-1"></div>
+                        <div class="col-10">
+                            <table class="table table-bordered table-responsive-md text-center col-10">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Language Known</th>
+                                    <th scope="col">Read</th>
+                                    <th scope="col">Write</th>
+                                    <th scope="col">Speak</th>
+                                    <th scope="col">Fluent/Non-fluent</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th><input type="text" style="border: none; max-width: 150px;" name="lang1" required></th>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="read1" placeholder="Yes/No" required></td>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="write1" placeholder="Yes/No" required></td>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="speak1" placeholder="Yes/No"required></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="fluent1" required></td>                                       
+                                    </tr>
+                                    <tr>
+                                        <th><input type="text" style="border: none; max-width: 150px;" name="lang2" ></th>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="read2" placeholder="Yes/No" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="write2" placeholder="Yes/No" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="speak2" placeholder="Yes/No"></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="fluent2" ></td>                                       
+                                    </tr>
+                                    <tr>
+                                        <th><input type="text" style="border: none; max-width: 150px;" name="lang3" ></th>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="read3" placeholder="Yes/No" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="write3" placeholder="Yes/No" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px; text-align: center;" name="speak3" placeholder="Yes/No"></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="fluent3" ></td>                                       
+                                    </tr>
+                                </tbody>
+                            </table>                 
+                        </div>
+                      </div>                    
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item ">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Other details:
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row" style="text-align: left;">
+                        <div class="col-1"></div>
+                        <div class="col-11">
+                            <br><label class="form-label" for="customFile">Previous Employment Details:</label>
+                        </div><div class="col-1"></div>
+                        <div class="col-10">
+                            <table class="table table-bordered table-responsive-md text-center col-10">
+                                <caption>(Give the latest one)</caption>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Organization</th>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Period(in months)</th>
+                                    <th scope="col">Designation</th>
+                                    <th scope="col">Reason for Change</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="org1" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="state1" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="period1" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="desig1" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="rsn1" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="org2" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="state2" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="period2" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="desig2" ></td>
+                                        <td><input type="text" style="border: none; max-width: 150px;" name="rsn2" ></td>
+                                    </tr>
+                                </tbody>
+                            </table><br>               
+                        </div><div class="col-1"></div><div class="col-1"></div>                        
+                        <div class="col-10">
+                            <label class="form-label" for="customFile">Strength and areas of improvement:</label>
+                        </div><div class="col-1"></div><div class="col-1"></div>
+                        <div class="col-10">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="strength" rows="6" placeholder="Highlight your Strength and areas which require improvement."></textarea><br>
+                        </div><div class="col-1"></div><div class="col-1"></div>
+                        <div class="col-10">
+                            <label class="form-label" for="customFile">Hobbies & Interests:</label>
+                        </div><div class="col-1"></div><div class="col-1"></div>
+                        <div class="col-10">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="hobbies" rows="6" placeholder="Highlight your hobbies and Interests which you actively persue."></textarea><br>
+                        </div><div class="col-1"></div><div class="col-1"></div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+            <button type="submit" class="btn btn-outline-danger" name="btn" style="float:right;">Submit</button>
+        </form>
+        </div><br><br>
+    </body>
+</html>

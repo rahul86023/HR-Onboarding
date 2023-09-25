@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/HR_styles.css" />
+
+    <script src="/js/HR_script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/js/script.js"></script>
+  </head>
+  <body id="body">
+    <div class="container">
+      <main>
+        <div class="main__container">
+          <!-- MAIN TITLE STARTS HERE -->
+          <div class="main__title">
+            <img src="/images/hello.svg" alt="" />
+            <div class="main__greeting"  style="text-align: left;">
+              <h1>Welcome to Probotiq Solutions!</h1>
+              <p>We are happy to see you.</p>
+            </div>
+          </div>
+
+          <!-- MAIN TITLE ENDS HERE -->
+          <br>
+          <div class="boxed"  style="text-align: left;">
+               Employee Information
+          </div>
+          <br>
+
+          <!-- MAIN Documents table STARTS HERE -->
+          <div class="table-box">
+            <div class="tab" style="text-align: center;">
+              <button class="tablinks" onclick="openCity(event, 'employee')">Existing Employee</button>
+              <button class="tablinks" onclick="openCity(event, 'onboarding')">New Recruits Details</button>
+            </div>
+
+          <!-- Tab content for employee info -->
+            <div id="employee" class="tabcontent" style="display:block">
+            <br><br>
+            <table class="table">
+              <thead>
+                <th>Employee Id </th>
+                 <th>Name</th>
+                 <th>Position</th>
+                 <th>Email ID</th>
+                 <th>Mobile Number</th>
+                 <th>DOJ</th>                     
+                 <th>Department</th>
+          
+              </thead>
+              <tbody>
+                  <tr>
+                      
+                      <td data-label="#">8011001</td>
+                      <td data-label="Name">Jon Snow</td>
+                      <td data-label="Position">SDE</td>
+                      <td data-label="Email ID">jon.snow@gmail.com</td>
+                      <td data-label="Mobile Number">89078947</td>
+                      <td data-label="DOJ">01/05/2021</td>
+                      <td data-label="Department">IT</td>
+                      
+                  </tr>
+          
+                  <tr>
+                      <td data-label="#">8011002</td>
+                      <td data-label="Name">Monica Gellar</td>
+                      <td data-label="Position">Tester</td>
+                      <td data-label="Email ID">moni.gell@gmail.com</td>
+                      <td data-label="Mobile Number">98347589</td>
+                      <td data-label="DOJ">05/03/2021</td>
+                      <td data-label="Documents">Admin</td>
+                  </tr>
+                  <tr>
+                      <td data-label="#">8011003</td>
+                      <td data-label="Name">Srikant Tiwari</td>
+                      <td data-label="Position">BDA</td>
+                      <td data-label="Email ID">sri.tiwari@gmail.com</td>
+                      <td data-label="Mobile Number">74974892</td>
+                      <td data-label="DOJ">01/01/2021</td>
+                      <td data-label="Documents">Help Desk</td>
+                  </tr>
+              </tbody>
+            </table>
+            </div>  
+          <!-- Tab content for new recruits info -->
+            <div id="onboarding" class="tabcontent">
+              <br><br>
+              <table class="table">
+                <thead>
+                  <th>Employee Id</th>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Email ID</th>
+                  <th>Joining Date</th>
+                  <th>Department</th>
+                  <th>Onboarding Status</th>
+                </thead>
+                <tbody>
+                  <%records.forEach(function(row){%>
+                    <tr>
+                        <td><%=row.employee_id%></td>
+                        <td><%=row.name%></td>
+                        <td><%=row.position%></td>
+                        <td><%=row.email%></td>
+   
+                        <td><%=row.joining_date%></td>
+                        <td><%=row.department%></td>
+                        <% if(row.VerificationStatus=='Verified'){ %>
+                          <td>Completed</td> 
+                        <%}else{ %>
+                          <td>Pending</td>
+                        <%} %>
+                          
+                        
+                           
+                    </tr>
+                    <% }) %>
+                  
+                </tbody>
+              </table>
+              <br><br>
+             
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+      <div id="sidebar" style="text-align: left;">
+        <div class="sidebar__img">
+            <img src="/images/logo.png" alt="logo" />
+        </div>
+        <i onclick="closeSidebar()" class="fa fa-times" id="sidebarIcon" aria-hidden="true" ></i>
+        <div class="sidebar__menu">
+          <div class="sidebar__link">
+            <i class="fa fa-home"></i>
+            <a href="/HRs/dashboard">Dashboard</a>
+          </div>
+          <h2>MNG</h2>
+          <div class="sidebar__link active_menu_link">
+            <i class="fa fa-building-o"></i>
+            <a href="/HRs/emp-details">Employee Management</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-wrench"></i>
+            <a href="/HRs/new_hire">New Recruits Management </a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-archive"></i>
+            <a href="/HRs/kit-status">Welcome Kit Status</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-check-circle"></i>
+            <a href="/HRs/doc_verify">Document Verification</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-handshake-o"></i>
+            <a href="/HRs/queries">Employee Queries</a>
+          </div>
+          <br><hr><br>
+          <div class="sidebar__logout">
+            <i class="fa fa-power-off"></i>
+            <a href="/HRs/sign-out">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

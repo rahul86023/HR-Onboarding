@@ -1,0 +1,46 @@
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login</title>
+      <link rel="stylesheet" href="/css/style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+   </head>
+   <body>
+      <div>
+         <br><br>
+         <a href="/"><img src="/images/logo.png"></a>
+         <br><br><br>
+      </div>
+      <div class="wrapper">
+         <div class="title">
+            Employee Login
+         </div>
+         <form action="/employees/create-session" method="POST">  
+            <br>
+            <input type="email" name="email" value="" class="form-control input-lg" placeholder="Your Email" required /><br>
+            <input type="password" name="password" value="" class="form-control input-lg" placeholder="Password" required/>
+            <div class="content">
+               <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+               </div>
+               <div class="pass-link">
+                  <a href="/employees/forgot_password">Forgot password?</a>
+               </div>
+            </div>
+            <div class="field">
+               <input type="submit" value="Login">
+            </div>
+            <div class="content">
+               <div class="checkbox">
+                  <label for="remember-me">Don't have an account?</label>
+                  <div class="pass-link">
+                     <a href="/employees/sign-up">Sign Up</a>
+                  </div>
+               </div>
+               
+            </div>
+         </form>
+      </div><br><br>
+   </body>
+</html>

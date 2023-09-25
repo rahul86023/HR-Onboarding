@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/HR_styles.css" />
+
+    <script src="/js/HR_script.js"></script>
+
+    
+  </head>
+  <body id="body">
+    <div class="container">
+     
+
+      <main>
+        <div class="main__container">
+          <!-- MAIN TITLE STARTS HERE -->
+
+          <div class="main__title">
+            <img src="/images/hello.svg" alt="" />
+            <div class="main__greeting" style="text-align: left;">
+              <h1>Welcome to Probotiq Solutions!</h1>
+            </div>
+          </div>
+
+          <!-- MAIN TITLE ENDS HERE -->
+           <br>
+          <div class="boxed" style="text-align: left;">
+               Employee List
+          </div>
+          <br>
+
+          <!-- MAIN query table STARTS HERE -->
+           <div class="table-box">
+            <table class="table">
+                <thead>
+                  <th>Employee Id</th>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Email ID</th>
+                  <th>Joining Date</th>
+                  <th>Department</th>
+                  <th>Onboarding Status</th>
+                </thead>
+                <tbody>
+                  <%records.forEach(function(row){ 
+                       %>
+                    <tr>
+                        <td><%=row.employee_id%></td>
+                        <td><%=row.name%></td>
+                        <td><%=row.position%></td>
+                        <td><%=row.email%></td>
+   
+                        <td><%=row.joining_date%></td>
+                        <td><%=row.department%></td>
+                        <td><%=row.onboardingStatus%></td>                        
+                    </tr>
+                    <%  }) %>
+                  
+                </tbody>
+              </table>
+              
+            </div>
+          
+        </div>
+      </main>
+
+      <div id="sidebar" style="text-align: left;">
+        <div class="sidebar__img">
+            <img src="/images/logo.png" alt="logo" />
+        </div>
+        <i onclick="closeSidebar()" class="fa fa-times" id="sidebarIcon" aria-hidden="true" ></i>
+        <div class="sidebar__menu">
+          <div class="sidebar__link active_menu_link">
+            <i class="fa fa-home"></i>
+            <a href="/HRs/projectList" >Employee List</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

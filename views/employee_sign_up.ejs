@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/css/sign-up.css">
+<!------ Include the above in your HEAD tag ---------->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>SignUp</title>
+      <link rel="stylesheet" href="/css/style.css">
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+   </head>
+   <body>
+      <div>
+         <br><br>
+         <img src="/images/logo.png">
+         <br><br><br>
+      </div>
+      <div class="wrapper">
+         <div class="title">
+            Employee Sign Up
+         </div>
+         <form action="/employees/create" method="POST">   
+            <div class="row">
+                        <div class="col-xs-7 col-md-12">
+                           <br> <input type="text" name="name" value="" class="form-control input-lg" placeholder="Your Name"  required/>    <br>                    </div>
+                        
+                    </div>
+                    <input type="email" name="email" value="" class="form-control input-lg" placeholder="Your Email" required /><br>
+                    <input type="text" name="empId" value="" class="form-control input-lg" placeholder="Your Employee ID" required /><br>
+                    
+                    <input type="password" name="password" value="" class="form-control input-lg" placeholder="Password" required/><br>
+                    <input type="password" name="confirm_password" value="" class="form-control input-lg" placeholder="Confirm Password"required /><br>                                   <div class="row">
+                        <div class="col-xs-4 col-md-4">
+                                 </div>
+                    </div>
+            <div class="field">
+               <input type="submit" value="Create account">
+            </div>
+            <div class="content">
+               <div class="checkbox">
+                  <label for="remember-me">Already have an account?</label>
+               </div>
+               <div class="pass-link">
+                  <a href="sign-in">Login</a>
+               </div>
+            </div>
+         </form>
+      </div>
+      <br><br>
+   </body>
+</html>
+
+
+

@@ -1,0 +1,38 @@
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/style.css">
+   </head>
+   <body>
+      <div>
+         <br><br>
+         <img src="/images/logo.png">
+         <br><br><br>
+      </div>
+      <div class="wrapper">
+         <div class="title">
+            HR Sign Up
+         </div>
+         <form action="/HRs/create" method="POST">
+            <br>
+            <input type="text" name="name" value="" class="form-control input-lg" placeholder="Your Name"  required/><br>
+            <input type="email" name="email" value="" class="form-control input-lg" placeholder="Your Email" required /><br>
+            <input type="password" name="password" value="" class="form-control input-lg" placeholder="Password" required/><br>
+            <input type="password" name="confirm_password" value="" class="form-control input-lg" placeholder="Confirm Password"required /><br>
+            <div class="field">
+               <input type="submit" value="Create account">
+            </div>
+            <div class="content">
+               <div class="checkbox">
+                  <label for="remember-me">Already have an account?</label>
+               </div>
+               <div class="pass-link">
+                  <a href="/HRs/sign-in">Login</a>
+               </div>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>
